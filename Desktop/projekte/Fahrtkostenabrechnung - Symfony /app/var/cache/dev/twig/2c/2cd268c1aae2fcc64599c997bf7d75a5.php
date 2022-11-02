@@ -89,11 +89,6 @@ class __TwigTemplate_bcf436793420a269ed14e37ca019cabe extends Template
 
         // line 6
         echo "
-    h1 {
-        display:flex;
-        justify-content:center;
-        text-decoration: underline;
-    }
 
 
 
@@ -107,7 +102,7 @@ class __TwigTemplate_bcf436793420a269ed14e37ca019cabe extends Template
 
     }
 
-    // line 19
+    // line 14
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -117,9 +112,9 @@ class __TwigTemplate_bcf436793420a269ed14e37ca019cabe extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 20
+        // line 15
         echo "
-    <h1> Welcome to our page </h1>
+    <center> <h1> Geben sie Hier ihre Daten ein </h1> </center>
 
 
 ";
@@ -143,7 +138,7 @@ class __TwigTemplate_bcf436793420a269ed14e37ca019cabe extends Template
 
     public function getDebugInfo()
     {
-        return array (  121 => 20,  111 => 19,  91 => 6,  81 => 5,  60 => 3,  37 => 1,);
+        return array (  116 => 15,  106 => 14,  91 => 6,  81 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -154,11 +149,6 @@ class __TwigTemplate_bcf436793420a269ed14e37ca019cabe extends Template
 
 {% block style %}
 
-    h1 {
-        display:flex;
-        justify-content:center;
-        text-decoration: underline;
-    }
 
 
 
@@ -168,9 +158,9 @@ class __TwigTemplate_bcf436793420a269ed14e37ca019cabe extends Template
 
 {% block body %}
 
-    <h1> Welcome to our page </h1>
+    <center> <h1> Geben sie Hier ihre Daten ein </h1> </center>
 
 
-{% endblock %}", "index.html.twig", "/Users/freinthaler/Desktop/datenbanken symfony/app/templates/index.html.twig");
+{% endblock %}", "index.html.twig", "/var/www/html/templates/index.html.twig");
     }
 }
