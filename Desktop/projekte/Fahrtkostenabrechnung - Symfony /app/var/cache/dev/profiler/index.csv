@@ -1,0 +1,12 @@
+c6b5ea,172.19.0.1,GET,http://localhost/,1666004356,,404
+7deb26,172.19.0.1,GET,http://localhost/,1666004777,,404
+9ce6bd,172.19.0.1,GET,http://localhost/favicon.ico,1666004777,961c1f,404
+961c1f,172.19.0.1,GET,http://localhost/favicon.ico,1666004777,,404
+608f18,172.19.0.1,GET,http://localhost/home,1666005191,,200
+da0d1b,172.19.0.1,GET,http://localhost/home,1666005197,,200
+604aca,172.19.0.1,GET,http://localhost/,1666005198,,404
+ece741,172.19.0.1,GET,http://localhost/favicon.ico,1666005198,f59235,404
+f59235,172.19.0.1,GET,http://localhost/favicon.ico,1666005198,,404
+e0eac2,172.19.0.1,GET,http://localhost/,1666005209,,200
+e9ffe9,172.19.0.1,GET,http://localhost/favicon.ico,1666005209,dc4168,404
+dc4168,172.19.0.1,GET,http://localhost/favicon.ico,1666005209,,404
