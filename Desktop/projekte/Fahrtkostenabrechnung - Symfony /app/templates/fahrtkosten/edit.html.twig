@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Fahrtkosten{% endblock %}
+
+{% block body %}
+    <center> <h1> Fahrtkosten bearbeiten </h1> </center>
+
+    {{ include('fahrtkosten/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <button id="overview_btn" onclick="window.open('{{ path('app_fahrtkosten_index', {'id': fahrtkosten.id}) }}','_self')"> Zurück zur Übersicht </button>
+
+    {{ include('fahrtkosten/_delete_form.html.twig') }}
+
+    <script>
+        const overview_btn = document.getElementById("overview_btn");
+        const delete_btn = document.querySelectorAll(".btn")[1];
+        const form = document.getElementsByName("fahrtkosten")[0];
+        console.log(delete_btn)
+
+        form.appendChild(overview_btn);
+        form.appendChild(delete_btn);
+
+        let form2 = document.getElementsByTagName("form")[1];
+        form2.remove();
+
+        // move "Ausbezahlt" text field away
+        const paid_input = document.getElementById("fahrtkosten_Ausbezahlt");
+        addStyletoElement("fahrtkosten_Ausbezahlt", "position:absolute; right:300px");
+
+        //link it to radio buttons (Ja / Nein )
+        const place_to_add = document.getElementsByTagName("div")[9];
+
+        addElement("label", "id", "yes_label", place_to_add);
+        addInputtoElement("yes_label", " Ja ");
+
+
+        addElement("input", "id", "yes", place_to_add);
+        addAttributetoElement("yes", "type", "radio");
+        addAttributetoElement("yes", "name", "selection")
+
+        addElement("label", "id", "no_label", place_to_add);
+        addInputtoElement("no_label", " Nein ");
+
+        addElement("input", "id", "no", place_to_add);
+        addAttributetoElement("no", "type", "radio");
+        addAttributetoElement("no", "name", "selection");
+
+        const yes_btn = document.getElementById("yes");
+        const no_btn = document.getElementById("no");
+
+        yes_btn.addEventListener("click", function() {
+            let database_field = document.getElementById("fahrtkosten_Ausbezahlt");
+            database_field.value = "Ja";
+        });
+
+        no_btn.addEventListener("click", function() {
+            let database_field = document.getElementById("fahrtkosten_Ausbezahlt");
+            database_field.value = "Nein";
+        })
+
+        let database_field = document.getElementById("fahrtkosten_Ausbezahlt");
+        addStyletoElement("fahrtkosten_Ausbezahlt", "visibility:hidden; position:absolute");
+
+        //=> hide the "Ausbezahlt" field
+
+        //functions
+        function addElement(element_to_add,attribute,attribute_value, source_to_attend) {
+            let element = document.createElement(element_to_add);
+            element.setAttribute(attribute, attribute_value);
+            source_to_attend.append(element);
+        }
+
+        function addAttributetoElement(selected_element_by_id, attribute,attribute_value) {
+            let select = document.getElementById(selected_element_by_id);
+            select.setAttribute(attribute, attribute_value);
+        }
+
+        function removeAttribute(selected_element_by_id, attribute_to_remove) {
+            document.getElementById(selected_element_by_id).removeAttribute(attribute_to_remove);
+        }
+
+
+        function addStyletoElement(selected_element_by_id, style) {
+            let select = document.getElementById(selected_element_by_id);
+            select.setAttribute("style", style);
+        }
+        function getRandomArrayElement(array) {
+            let random_num = Math.floor(Math.random() * array.length);
+            return array[random_num];
+        }
+
+        function addInputtoElement(selected_element_by_id, text_to_add) {
+            let select = document.getElementById(selected_element_by_id);
+            let content = document.createTextNode(text_to_add);
+            select.appendChild(content);
+        }
+
+
+    </script>
+
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fahrtkosten{% endblock %}
+
+{% block body %}
+    <h1>Fahrtkosten</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fahrtkosten.id }}</td>
+            </tr>
+            <tr>
+                <th>Vorname</th>
+                <td>{{ fahrtkosten.vorname }}</td>
+            </tr>
+            <tr>
+                <th>Nachname</th>
+                <td>{{ fahrtkosten.Nachname }}</td>
+            </tr>
+            <tr>
+                <th>Abteilung</th>
+                <td>{{ fahrtkosten.Abteilung }}</td>
+            </tr>
+            <tr>
+                <th>Datum_Reise</th>
+                <td>{{ fahrtkosten.DatumReise ? fahrtkosten.DatumReise|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Reisestart</th>
+                <td>{{ fahrtkosten.Reisestart }}</td>
+            </tr>
+            <tr>
+                <th>Reiseziel</th>
+                <td>{{ fahrtkosten.Reiseziel }}</td>
+            </tr>
+            <tr>
+                <th>Kilometer</th>
+                <td>{{ fahrtkosten.Kilometer }}</td>
+            </tr>
+            <tr>
+                <th> Kosten </th>
+                <td>{{ fahrtkosten.Kilometer * 0.4}} € </td>
+            </tr>
+            <tr>
+                <th> Ausbezahlt </th>
+                <td class="is_it_empty">{{ fahrtkosten.Ausbezahlt }} </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <button onclick="window.open('{{ path('app_fahrtkosten_index') }}','_self')"> Zurück zur Übersicht </button>
+
+
+    <button onclick="window.open('{{ path('app_fahrtkosten_edit', {'id': fahrtkosten.id}) }}','_self')"> Bearbeiten </button>
+
+
+    {{ include('fahrtkosten/_delete_form.html.twig') }}
+
+
+
+{% endblock %}

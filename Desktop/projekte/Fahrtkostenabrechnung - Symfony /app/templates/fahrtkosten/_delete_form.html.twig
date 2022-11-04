@@ -1,0 +1,4 @@
+<form id="delete" style="border:none; position:absolute; top:136px; right:695px;" method="post" action="{{ path('app_fahrtkosten_delete', {'id': fahrtkosten.id}) }}" onsubmit="return confirm('Bist du sicher dass du dieses Element löschen möchtest?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ fahrtkosten.id) }}">
+    <button class="btn">Löschen</button>
+</form>

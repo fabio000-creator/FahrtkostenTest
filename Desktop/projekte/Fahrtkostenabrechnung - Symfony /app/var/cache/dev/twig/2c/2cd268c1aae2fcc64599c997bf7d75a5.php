@@ -114,7 +114,7 @@ class __TwigTemplate_bcf436793420a269ed14e37ca019cabe extends Template
 
         // line 15
         echo "
-    <center> <h1> Geben sie Hier ihre Daten ein </h1> </center>
+    <center> <h1> Geben sie hier ihre Daten ein </h1> </center>
 
 
 ";
@@ -158,7 +158,7 @@ class __TwigTemplate_bcf436793420a269ed14e37ca019cabe extends Template
 
 {% block body %}
 
-    <center> <h1> Geben sie Hier ihre Daten ein </h1> </center>
+    <center> <h1> Geben sie hier ihre Daten ein </h1> </center>
 
 
 {% endblock %}", "index.html.twig", "/var/www/html/templates/index.html.twig");

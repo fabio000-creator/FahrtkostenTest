@@ -16,5 +16,10 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
-    'app_home_index' => [[], ['_controller' => 'App\\Controller\\HomeController::home'], [], [['text', '/']], [], [], []],
+    'app_fahrtkosten_auth' => [[], ['_controller' => 'App\\Controller\\FahrtkostenController::auth'], [], [['text', '/overview']], [], [], []],
+    'app_fahrtkosten_index' => [[], ['_controller' => 'App\\Controller\\FahrtkostenController::index'], [], [['text', '/4Qw7KoiH80Zqr00!55GZI&4HhWfVdRMhRJL5#l5&P6$Qi1wbjK33pHFp8so#y9ln70y3ubX0WY*kDA3Hz9LXxAdF9mIscCKknW9']], [], [], []],
+    'app_fahrtkosten_new' => [[], ['_controller' => 'App\\Controller\\FahrtkostenController::new'], [], [['text', '/']], [], [], []],
+    'app_fahrtkosten_show' => [['id'], ['_controller' => 'App\\Controller\\FahrtkostenController::show'], [], [['variable', '/', '[^/]++', 'id', true]], [], [], []],
+    'app_fahrtkosten_edit' => [['id'], ['_controller' => 'App\\Controller\\FahrtkostenController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true]], [], [], []],
+    'app_fahrtkosten_delete' => [['id'], ['_controller' => 'App\\Controller\\FahrtkostenController::delete'], [], [['variable', '/', '[^/]++', 'id', true]], [], [], []],
 ];
